@@ -10,7 +10,7 @@ import javax.validation.constraints.NotBlank;
  * @date: 2025-04-01 17:30
  */
 @Data
-public class ActIdGroupCreateDTO {
+public class ActIdGroupUpdateDTO {
 
     @NotBlank
     private String groupId;
