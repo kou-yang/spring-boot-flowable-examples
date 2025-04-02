@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ky.flowable.mapper.BusinessProcessMapper">
+
+    <resultMap id="BaseResultMap" type="com.ky.flowable.model.entity.BusinessProcess">
+            <id property="id" column="ID" jdbcType="BIGINT"/>
+            <result property="businessKey" column="BUSINESS_KEY" jdbcType="VARCHAR"/>
+            <result property="businessType" column="BUSINESS_TYPE" jdbcType="VARCHAR"/>
+            <result property="processInstanceId" column="PROCESS_INSTANCE_ID" jdbcType="VARCHAR"/>
+            <result property="processDefinitionId" column="PROCESS_DEFINITION_ID" jdbcType="VARCHAR"/>
+            <result property="startUserId" column="START_USER_ID" jdbcType="VARCHAR"/>
+            <result property="startTime" column="START_TIME" jdbcType="TIMESTAMP"/>
+            <result property="endTime" column="END_TIME" jdbcType="TIMESTAMP"/>
+            <result property="status" column="STATUS" jdbcType="VARCHAR"/>
+            <result property="currentTask" column="CURRENT_TASK" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        ID,BUSINESS_KEY,BUSINESS_TYPE,
+        PROCESS_INSTANCE_ID,PROCESS_DEFINITION_ID,START_USER_ID,
+        START_TIME,END_TIME,STATUS,
+        CURRENT_TASK
+    </sql>
+</mapper>
