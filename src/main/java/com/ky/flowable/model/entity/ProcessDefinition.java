@@ -28,7 +28,7 @@ public class ProcessDefinition implements Serializable {
     /**
      * 流程KEY
      */
-    private String key;
+    private String processKey;
 
     /**
      * 流程分类
@@ -44,11 +44,6 @@ public class ProcessDefinition implements Serializable {
      * 描述
      */
     private String description;
-
-    /**
-     * 关联表单ID
-     */
-    private String formId;
 
     /**
      * 是否激活
