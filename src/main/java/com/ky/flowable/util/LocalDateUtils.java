@@ -17,7 +17,7 @@ public class LocalDateUtils {
      * @param time 时间
      * @return LocalDateTime
      */
-    public LocalDateTime toLocalDateTime(Date time) {
+    public static LocalDateTime toLocalDateTime(Date time) {
         return time.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
     }
 
@@ -40,7 +40,7 @@ public class LocalDateUtils {
      * @param time 时间
      * @return LocalDate
      */
-    public LocalDate toLocalDate(Date time) {
+    public static LocalDate toLocalDate(Date time) {
         return time.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
     }
 

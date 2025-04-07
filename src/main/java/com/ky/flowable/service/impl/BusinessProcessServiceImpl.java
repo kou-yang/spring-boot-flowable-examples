@@ -15,6 +15,10 @@ import org.springframework.stereotype.Service;
 public class BusinessProcessServiceImpl extends ServiceImpl<BusinessProcessMapper, BusinessProcess>
     implements BusinessProcessService{
 
+    @Override
+    public BusinessProcess getByProcessInstanceId(String processInstanceId) {
+        return lambdaQuery().eq(BusinessProcess::getProcessInstanceId, processInstanceId).one();
+    }
 }
 
 

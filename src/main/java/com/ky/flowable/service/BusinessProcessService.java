@@ -10,4 +10,10 @@ import com.ky.flowable.model.entity.BusinessProcess;
 */
 public interface BusinessProcessService extends IService<BusinessProcess> {
 
+    /**
+     * 根据流程实例id查询
+     * @param processInstanceId
+     * @return
+     */
+    BusinessProcess getByProcessInstanceId(String processInstanceId);
 }
