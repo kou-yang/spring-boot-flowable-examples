@@ -1,13 +1,11 @@
 package com.ky.flowable.model.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 /**
  * 请假申请表
@@ -45,17 +43,18 @@ public class Leave implements Serializable {
     /**
      * 开始时间
      */
-    private Date startTime;
+    private LocalDate startTime;
 
     /**
      * 结束时间
      */
-    private Date endTime;
+    private LocalDate endTime;
 
     /**
      * 创建时间
      */
-    private Date createTime;
+    @TableField(fill = FieldFill.INSERT)
+    private LocalDateTime createTime;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
